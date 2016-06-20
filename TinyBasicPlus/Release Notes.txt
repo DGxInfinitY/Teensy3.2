@@ -1,0 +1,4 @@
+This is just a modification of TinyBasicPlus for the Arduino that has most of the functions fixed and eeprom working, this is my first attempt at porting a simple interperter so I will try my best. The next step is to make this an actual operating system with a graphics stack as well as an input
+handler(So we can use a keybord.) This will make a fully funcational standalone computer that is based on a teensy possible. I have a few
+Ideas in mind. Try this out for yourself and see. It has a lot of nestalga from the good old days. Thanks. Oh and by the way this software cannot be
+used for profitable use, it is open source so don't take what isn't yours.
