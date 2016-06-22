@@ -99,7 +99,7 @@ TONEW freq,timems - same as above, but also waits for it to finish
 
 NOTONE - stop playback of all playing tones
 
-####NOTE: TONE commands are by default disabled
+NOTE: TONE commands are by default disabled
 
 ## Example programs
 
@@ -107,7 +107,7 @@ Here are a few example programs to get you started...
 
 ### Blink
 
-####Hook up an LED between pin 13 and ground
+Hook up an LED between pin 13 and ground
 
 10 FOR A=0 TO 10
 
@@ -123,7 +123,7 @@ Here are a few example programs to get you started...
 
 ### Fade
 
-####Hook up an LED between pin 23 and ground
+Hook up an LED between pin 23 and ground
 
 10 FOR A=0 TO 10
 
@@ -147,7 +147,7 @@ Here are a few example programs to get you started...
 
 ### LED KNOB
 
-####Hook up a potentiometeter between analog 0(Digital pin 14) and ground, led from digital 23 and ground. If knob is at 0, it stops
+Hook up a potentiometeter between analog 0(Digital pin 14) and ground, led from digital 23 and ground. If knob is at 0, it stops
 
 10 A = AREAD( 14 )
 
@@ -163,9 +163,20 @@ Here are a few example programs to get you started...
 
 100 PRINT "Done."
 
+### AREAD example
+Hook up a wire to pin 14(A0) and plug it into various pins such as pin 13(LED pin) and see the voltage change.
+
+10 A = AREAD( 14 )
+
+20 PRINT A
+
+30 GOTO 10
+
+NOTE: To exit an infinity program you need to press CTRL+C. That will end the program.
+
 ### ECHAIN example
 
-####Write a small program, store it in EEPROM. We'll show that variables don't get erased when chaining happens
+Write a small program, store it in EEPROM. We'll show that variables don't get erased when chaining happens
 
 EFORMAT
 
@@ -183,11 +194,11 @@ EFORMAT
 
 100 PRINT "Hi!"
 
-####Then store it in EEProm
+Then store it in EEProm
 
 ESAVE
 
-####Now, create a new program in main memory and run it
+Now, create a new program in main memory and run it
 
 NEW
 
@@ -199,7 +210,7 @@ NEW
 
 40 ECHAIN
 
-####List both, and run
+List both, and run
 
 ELIST
 
