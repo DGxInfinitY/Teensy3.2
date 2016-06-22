@@ -2,19 +2,28 @@
 // TinyBasic Plus
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Authors: Mike Field <hamster@snap.net.nz>
-//      Scott Lawrence <yorgle@gmail.com>
-//	Donovan Goodwin(DGxInfinitY) <ddg2goodwin@gmail.com>
+// Authors: 	Mike Field <hamster@snap.net.nz>
+//     		Scott Lawrence <yorgle@gmail.com>
+// 		Donovan Goodwin(DGxInfinitY) <ddg2goodwin@gmail.com>
 //
 //
-
-#define kVersion "v1.0: Teensy Edition"
+//
+#define kVersion "v1.1"
+//
+//
+//
+// v1.1:  2016-06-22
+//	Just some minor bug fixes for now, a official name has been decided "Teensy TinyBASICPlus" and that has been added. No more real features
+//	as of now I have added a list of most supported commands on my github page https://github.com/DGxInfinitY/Teensy3.2/tree/master/TinyBasicPlus
+//	I am still working on more commands as well as a standalone computer. For now nothing much is going to change. Just more bug fixes and 
+// 	what not. 
+//
 // v1.0:  2016-06-20
 //	Support for the Teensy 3.2 was added as well as some minor bug fixes. This version
 //	doesn't have support for standalone capabilitys(such as keyboard support or display support.)
 //	but will be recieving it at a later date. I am planning on makeing this a standalone computer system but I will see how far we
-//	get. This revision is v1.0 becuase It is now being developed by DGxInfinitY(for use with the Teensy 3.2) and 
-//	my also get support for other AVRs / Development boards.
+//  	get. This revision is v1.0 becuase It is now being developed by DGxInfinitY(for use with the Teensy 3.2) and 
+//  	my also get support for other AVRs / Development boards.
 //
 // v0.13: 2013-03-04
 //      Support for Arduino 1.5 (SPI.h included, additional changes for DUE support)
@@ -22,7 +31,6 @@
 // v0.12: 2013-03-01
 //      EEPROM load and save routines added: EFORMAT, ELIST, ELOAD, ESAVE, ECHAIN
 //      added EAUTORUN option (chains to EEProm saved program on startup)
-//      Bugfixes to build properly on non-arduino systems (PROGMEM #define workaround)
 //      cleaned up a bit of the #define options wrt TONE
 //
 // v0.11: 2013-02-20
@@ -82,6 +90,7 @@
 
 
 
+
 // IF testing with Visual C, this needs to be the first thing in the file.
 //#include "stdafx.h"
 
@@ -95,7 +104,7 @@ char eliminateCompileErrors = 1;  // fix to suppress arduino build errors
 #define ARDUINO 1
 #endif
 
-
+#define LEDPIN 13
 ////////////////////////////////////////////////////////////////////////////////
 // Feature option configuration...
 
@@ -141,7 +150,7 @@ char eliminateCompileErrors = 1;  // fix to suppress arduino build errors
 // okay, this is a hack for now
 // if we're in here, we're a DUE probably (ARM instead of AVR)
 
-#define RAMEND 60096-1
+#define RAMEND 59676-1
 
 // turn off EEProm
 //#undef ENABLE_EEPROM
@@ -449,7 +458,7 @@ static const unsigned char okmsg[]            PROGMEM = "OK";
 static const unsigned char whatmsg[]          PROGMEM = "What? ";
 static const unsigned char howmsg[]           PROGMEM = "How?";
 static const unsigned char sorrymsg[]         PROGMEM = "Sorry!";
-static const unsigned char initmsg[]          PROGMEM = "TinyBasic Plus " kVersion;
+static const unsigned char initmsg[]          PROGMEM = "Teensy TinyBASICPlus " kVersion;
 static const unsigned char memorymsg[]        PROGMEM = " bytes free.";
 #ifdef ARDUINO
 #ifdef ENABLE_EEPROM
@@ -1933,7 +1942,13 @@ void setup()
   
   Serial.println( sentinel );
   printmsg(initmsg);
-
+  pinMode(13, OUTPUT);
+  digitalWrite(LEDPIN, HIGH);
+  delay(500);
+  digitalWrite(LEDPIN, LOW);
+  delay(500);
+  digitalWrite(LEDPIN, HIGH);
+  
 #ifdef ENABLE_FILEIO
   initSD();
   
