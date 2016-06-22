@@ -1,4 +1,4 @@
-# Teensy 3.2 TinyBasicPlus
+# Teensy TinyBasicPlus
 This is an interpereter for the Teensy 3.2 that is fully based off the Arduino TinyBasicPlus that can be found here:
 https://github.com/BleuLlama/TinyBasicPlus
 This has been fully ported to run on the Teensy 3.2 utilizing all the availble memory and eeprom. This makes it
