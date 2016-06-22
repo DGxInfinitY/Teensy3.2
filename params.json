@@ -1,6 +1,6 @@
 {
   "name": "Teensy3.2",
-  "tagline": "For all my Teensy 3.2 projects, as well as the home of my Teensy TinyBasicPlus port.",
-  "body": "# Teensy3.2\r\nThis contains files for my Teensy3,2 projects. Many libraries and code I realese here will be compatible or almost compatible with earlier Teensys. My email for contact is ddg2goodwin@gmail.com Thanks.\r\nHome of the Teensy 3.2 TinyBasicPlus port. v1.0\r\n",
+  "tagline": "For all my Teensy 3.2 projects, as well as the home of my Teensy TinyBASICPlus port.",
+  "body": "# Teensy3.2\r\nThis contains files for my Teensy3.2 projects. Many libraries and code I release here will be compatible or almost compatible with earlier Teensys. My email for contact is ddg2goodwin@gmail.com Thanks.\r\n\r\nHome of the Teensy 3.2 TinyBasicPlus port\r\n![](https://goo.gl/photos/pprAa2kg2jdmMMc97)",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
