@@ -14,6 +14,9 @@ Well as of now I have a simple project: I want to make a standalone computer out
 
 Just minor bug fixes and what not as well as the official name in the boot up text. It now also has an LED boot up sequence just in case you didn't think it was working. You can turn this LED off by typing DWRITE 13, LOW and that will turn it off if you like.
 
+# Connection Instructions
+The serial port that you need to connect to it can be found out using the Arduino IDE, then you need to put this serial port into your favorite Serial Terminal. The buad rate is: 115200.
+
 # Full list of supported statements and functions
 ## System
 
