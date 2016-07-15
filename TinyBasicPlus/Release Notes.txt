@@ -8,4 +8,5 @@ open source so don't take what isn't yours.
 VERSION 1.1 HAS BEEN RELEASED!
 Today It's not what I had wanted to release but I think that since we have an official name I might as well put it in the
 operating system so now we have the complete name in the operating system. I have added a few minor bug fixes and a boot up
-sequence(LED on Pin 13 will flash a little) That is all for now. Thanks for trying it and have fun.
+sequence(LED on Pin 13 will flash a little). There are a few enhancments to the EEPROM commands and memory management. That
+is all for now. Thanks for trying it and have fun.
