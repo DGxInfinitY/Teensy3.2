@@ -2,8 +2,10 @@
 // TinyBasic Plus
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Authors: 	Mike Field <hamster@snap.net.nz>
-//     		Scott Lawrence <yorgle@gmail.com>
+// Original Authors:
+//    Mike Field <hamster@snap.net.nz>
+//    Scott Lawrence <yorgle@gmail.com>
+// Developers:
 // 		Donovan Goodwin(DGxInfinitY) <ddg2goodwin@gmail.com>
 //
 //
@@ -24,8 +26,8 @@
 //	Support for the Teensy 3.2 was added as well as some minor bug fixes. This version
 //	doesn't have support for standalone capabilitys(such as keyboard support or display support.)
 //	but will be recieving it at a later date. I am planning on makeing this a standalone computer system but I will see how far we
-//  	get. This revision is v1.0 becuase It is now being developed by DGxInfinitY(for use with the Teensy 3.2) and 
-//  	my also get support for other AVRs / Development boards.
+//  get. This revision is v1.0 becuase it is a new project and is now being developed by DGxInfinitY(for use with the Teensy 3.2) and 
+//  may also get support for other AVRs / Development boards.
 //
 // v0.13: 2013-03-04
 //      Support for Arduino 1.5 (SPI.h included, additional changes for DUE support)
