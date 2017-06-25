@@ -1,2 +1,2 @@
-# Teensy3.2
-This contains files for my Teensy3,2 projects. Many libraries and code I realese here will be compatible or almost compatible with earlier Teensys. My email for contact is ddg2goodwin@gmail.com Thanks.
+# Teensy TinyBASICPlus
+This Repository contains the Stable release of TeensyTinyBASICPlus and has been tested to work on the Teensy3.2. See TinyBasicPlus for more info on the project.
