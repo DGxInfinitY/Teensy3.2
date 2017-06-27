@@ -1,21 +1,23 @@
 # Teensy TinyBASICPlus
-This is an interpereter for the Teensy 3.2 that is fully based off the Arduino TinyBasicPlus that can be found here:
+This is an interpreter for the Teensy 3.2 that is fully based off the Arduino TinyBasicPlus that can be found here:
 https://github.com/BleuLlama/TinyBasicPlus
-This has been fully ported to run on the Teensy 3.2 utilizing all the availble memory and eeprom. This makes it
-possible to add many libraries and create a fully integrated operating system for the Teensy 3.2. This is 
-my first attempt at porting an interperter so sorry if I made any mistakes and lets get going on porting the 
+This has been fully ported to run on the Teensy 3.2 utilizing all the available memory and eeprom. This makes it
+possible to add many libraries and create a fully integrated operating system for the Teensy 3.2. This is
+my first attempt at porting an interpreter so sorry if I made any mistakes and lets get going on porting the
 needed libraries for the graphics stack as well as input(keyboard or button/key matrix of some sort.)
 
 # Plans for the future
-Well as of now I have a simple project: I want to make a standalone computer out of this. But I seem to have a little problem with the needed libraries, I just can't get this to work with the tvOut(Arduino) library. The PS/2keyboard library has no problems but the tvOut seems to not have any Teensy support at all, I am still looking into it but an easier solution is to use one of the other supported MCU's as a GPU and have it use the Serial port as an input. This can be achieved using an ATMEGA328P(Arduino) Chip in combination with the Teensy as well, If I were able to sort out the serial connection between them I could make a single board computer using the Teensy 3.2 and a ATMEGA328P. I am just exploring my options as of now. If you have a better idea or if you can help with porting the tvOut library than email me at ddg2goodwin@gmail.com , I am simply just not skilled enough to even attempt porting it. The next "v1.2" release will hopefully have some extra commands(they won't be standard BASIC commands.) Or more work for the SBC project. 
+Well as of now I have a simple project: I want to make a standalone computer out of this. But I seem to have a little problem with the needed libraries, I just can't get this to work with the tvOut(Arduino) library. The PS/2keyboard library has no problems but the tvOut seems to not have any Teensy support at all, I am still looking into it but an easier solution is to use one of the other supported MCU's as a GPU and have it use the Serial port as an input. This can be achieved using an ATMEGA328P(Arduino) Chip in combination with the Teensy as well, If I were able to sort out the serial connection between them I could make a single board computer using the Teensy 3.2 and a ATMEGA328P. I am just exploring my options as of now. If you have a better idea or if you can help with porting the tvOut library than email me at ddg2goodwin@gmail.com , I am simply just not skilled enough to even attempt porting it. The next "v1.2" release will hopefully have some extra commands(they won't be standard BASIC commands.) Or more work for the SBC project.
 
 # Release
-##### Version 1.1 has been released!
+##### Version 1.2 has been released!
 
-Just minor bug fixes and what not as well as the official name in the boot up text. It now also has an LED boot up sequence just in case you didn't think it was working. You can turn this LED off by typing DWRITE 13, LOW and that will turn it off if you like.
+Big update to code, new functionality from main Tiny BasicPlus and Teensy TinyBASICPlus have been merged, this means that now
+the INPUT command functions properly as well as new implementations on commands, there are also some cool new features planned
+so stay tuned for that.
 
 # Connection Instructions
-The serial port that you need to connect to it can be found out using the Arduino IDE, then you need to put this serial port into your favorite Serial Terminal. The buad rate is: 115200.
+The serial port that you need to connect to it can be found out using the Arduino IDE, then you need to put this serial port into your favorite Serial Terminal. The baud rate is: 115200.
 
 # Full list of supported statements and functions
 ## System
@@ -24,7 +26,7 @@ BYE - exits Basic, soft reboot on Arduino
 END - stops execution from the program, also "STOP"                                                                       
 MEM - displays memory usage statistics                                                                                  
 NEW - clears the current program                                                                                          
-RUN - executes the current program 
+RUN - executes the current program
 
 ## File IO/SD Card                                                                                                          
 FILES - lists the files on the SD card
