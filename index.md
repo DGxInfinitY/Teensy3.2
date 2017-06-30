@@ -1,6 +1,8 @@
 # Teensy3.2
-This contains files for my Teensy3.2 projects. Many libraries and code I release here will be compatible or almost compatible with earlier Teensys. My email for contact is ddg2goodwin@gmail.com Thanks.
 
-Home of the Teensy 3.2 TinyBasicPlus port
+Home of the Teensy TinyBasicPlus Project!
 
-Version 1.1 Is now live, go get it while its hot by clicking the Download ZIP button!
+# How-To
+To get started with Teensy TinyBASICPlus first download the .zip of the project and open it either on the Arudino IDE or on the Teensy Loader Application(.ino or .hex) and flash, this project is aimed at providing support for the Teensy as a valid Arduino replacement and to give old timers a warm fuzzy feeling...
+
+# Soon to be Video Guide here:
