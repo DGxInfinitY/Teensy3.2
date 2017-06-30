@@ -5,14 +5,19 @@
 // Original Authors:
 //    Mike Field <hamster@snap.net.nz>
 //    Scott Lawrence <yorgle@gmail.com>
-// Developers:
+//
+// Teensy Developers:
 // 		Donovan Goodwin(DGxInfinitY) <ddg2goodwin@gmail.com>
 //
 //
 //
 
-#define kVersion "v1.2"
+#define kVersion "v1.3"
 
+// v1.3: 2017-06-29
+//  EEPROM functionality has been restored and is fully functional for use with stable version.
+//  We have also enabled FILEIO for using an sdcard with your Teensy3.2, this is still a very Alpha isk feature...
+//  The Code also now fully supports TONE commands through the A14 Pin on your teensy for better audio resolution(DAC)
 //
 // v1.2: 2017-06-26
 //  Input command always set the variable to 99
@@ -119,8 +124,8 @@ char eliminateCompileErrors = 1;  // fix to suppress arduino build errors
 
 // This enables LOAD, SAVE, FILES commands through the Arduino SD Library
 // it adds 9k of usage as well.
-//#define ENABLE_FILEIO 1
-#undef ENABLE_FILEIO
+#define ENABLE_FILEIO 1
+//#undef ENABLE_FILEIO
 
 // this turns on "autorun".  if there's FileIO, and a file "autorun.bas",
 // then it will load it and run it when starting up
@@ -131,15 +136,15 @@ char eliminateCompileErrors = 1;  // fix to suppress arduino build errors
 
 // this is the alternate autorun.  Autorun the program in the eeprom.
 // it will load whatever is in the EEProm and run it
-#define ENABLE_EAUTORUN 1
-//#undef ENABLE_EAUTORUN
+//#define ENABLE_EAUTORUN 1
+#undef ENABLE_EAUTORUN
 
 // this will enable the "TONE", "NOTONE" command using a piezo
 // element on the specified pin.  Wire the red/positive/piezo to the kPiezoPin,
 // and the black/negative/metal disc to ground.
 // it adds 1.5k of usage as well.
-//#define ENABLE_TONES 1
-#undef ENABLE_TONES
+#define ENABLE_TONES 1
+//#undef ENABLE_TONES
 #define kPiezoPin A14
 
 // we can use the EEProm to store a program during powerdown.  This is
@@ -162,8 +167,8 @@ char eliminateCompileErrors = 1;  // fix to suppress arduino build errors
 #define RAMEND 60001-1
 
 // turn off EEProm
-#undef ENABLE_EEPROM
-#undef ENABLE_TONES
+//#undef ENABLE_EEPROM
+//#undef ENABLE_TONES
 
 #else
 // we're an AVR!
