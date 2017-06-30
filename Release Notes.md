@@ -1,9 +1,15 @@
 This is just a modification of TinyBasicPlus for the Arduino that has most of the functions fixed and eeprom working, this
-is my first attempt at porting a simple interperter so I will try my best. The next step is to make this an actual operating
-system with a graphics stack as well as an input handler(So we can use a keybord.) This will make a fully funcational
+is my first attempt at porting a simple interpreter so I will try my best. The next step is to make this an actual operating
+system with a graphics stack as well as an input handler(So we can use a keyboard.) This will make a fully functional
 standalone computer that is based on a Teensy possible. I have a few Ideas in mind. Try this out for yourself and see. It has
-a lot of nestalga from the good old days. Thanks. Oh and by the way this software cannot be used for profitable use, it is
-open source so don't take what isn't yours.
+a lot of nostalgia from the good old days. Thanks.
+
+# VERSION 1.3 HAS BEEN RELEASED!
+Big update to enable some experimental features that have passed testing and are ready for prime time, this version re-enables
+EEPROM, TONE, and a new feature for SDCards on your Teensy3.2.
+
+# VERSION 1.2 HAS BEEN RELEASED!
+Large update to code and new base off of the v0.14 of the TinyBasicPlus for Arduino adding some good usability updates.
 
 # VERSION 1.1 HAS BEEN RELEASED!
 We now have an official name so I might as well put it in the beet sequence for the operating system.
