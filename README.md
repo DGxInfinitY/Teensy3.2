@@ -10,12 +10,13 @@ needed libraries for the graphics stack as well as input(keyboard or button/key 
 Well as of now I have a simple project: I want to make a standalone computer out of this. But I seem to have a little problem with the needed libraries, I just can't get this to work with the tvOut(Arduino) library. The PS/2keyboard library has no problems but the tvOut seems to not have any Teensy support at all, I am still looking into it but an easier solution is to use one of the other supported MCU's as a GPU and have it use the Serial port as an input. This can be achieved using an ATMEGA328P(Arduino) Chip in combination with the Teensy as well, If I were able to sort out the serial connection between them I could make a single board computer using the Teensy 3.2 and a ATMEGA328P. I am just exploring my options as of now. If you have a better idea or if you can help with porting the tvOut library than email me at ddg2goodwin@gmail.com , I am simply just not skilled enough to even attempt porting it. The next "v1.2" release will hopefully have some extra commands(they won't be standard BASIC commands.) Or more work for the SBC project.
 
 # Release
-##### Version 1.3 has been released!
+##### Version 1.3.1 has been released!
 
 Big update to code, new functionality from main Tiny BasicPlus and Teensy TinyBASICPlus have been merged, this means that now
 the INPUT command functions properly as well as new implementations on commands, there are also some cool new features planned
 so stay tuned for that. This version now enables many features brought by the Merge of Tiny BasicPlus and re-enables much needed
-features such as eeprom and sound output via the tone command.
+features such as eeprom and sound output via the tone command. SD Card support has been disabled out of the box due to
+issues with the library.
 
 # Connection Instructions
 The serial port that you need to connect to it can be found out using the Arduino IDE, then you need to put this serial port into your favorite Serial Terminal. The baud rate is: 115200.
